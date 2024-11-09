@@ -1,0 +1,529 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #f5ebe0;
+  margin: 0px;
+}
+
+header{
+  background-color: #52796f;
+  color: white;
+  text-align: center;
+  /*padding: 20px; 是留白20px*/
+  padding: 20px;
+  margin: 0px;
+}
+
+nav{
+  background-color: #84a98c;
+  text-align: center;
+  font-family: Arial;
+}
+
+nav a{
+  padding: 14px 16px;
+  display: inline-block;
+  color: #ffffff;
+}
+
+nav a:hover{
+  background-color: #cad2c5;
+  color: #52796f;
+}
+
+footer{
+  background-color: #84a98c;
+  color: #444444;
+  text-align: center;
+  padding: 10px;
+}
+
+footer a{
+  color: #ffffff;
+}
+
+footer a:hover{
+  background-color: #cad2c5;
+  color: #52796f;
+}
+
+main{
+  padding: 20px;
+}
+
+.card{
+  background-color: #e3d5ca;
+  background-size: cover;
+  padding: 20px;
+  margin: 20px 10px;
+  border-radius: 15px;
+}
+
+article{
+  float: right;
+  width: 73%;
+}
+
+aside{
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+
+.activity-section {
+  display: flex;
+  align-items: flex-start; /* 圖片和文字對齊 */
+  gap: 20px; /* 圖片和文字之間的距離 */
+}
+
+.activity-image {
+  max-width: 400px; /* 調整圖片大小 */
+  height: auto;
+}
+
+.activity-content {
+  max-width: 600px; /* 調整內容寬度 */
+}
+
+hr{
+  border-bottom: solid 4px #354f52
+}
+
+h3{
+  margin: 20px;
+  text-align: left;
+}
+.bold{
+  font-weight: bold;
+}
+
+img{
+  max-width: 200px; /* 調整圖片大小 */
+  height: auto;
+}
+
+.contact-info-box {
+  display: inline-block;
+  padding: 10px;
+  margin-left: 15px; /* 調整距離 */
+  border: 4px solid #52796f; /* 方框的邊框顏色，這裡使用與Facebook一致的藍色 */
+  background-color: #84a98c;
+  color: #f5ebe0; /* 字體顏色 */
+  font-size: 14px; /* 調整文字大小 */
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.social {
+  display: flex;
+  justify-content: space-around; /* 或者使用 space-between */
+  align-items: center;
+  margin-top: 20px; /* 可根據需要調整 */
+}
+
+.social a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  text-decoration: none;
+  transition: 0.25s;
+  border-radius: 50%;
+  color: #fff;
+}
+
+/* Facebook 背景 */
+.social a.facebook {
+  background-color: #3b5998;
+}
+
+/* Twitter 背景 */
+.social a.twitter {
+  background-color: #1da1f2;
+}
+
+/* Instagram 背景：漸變效果 */
+.social a.instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888) !important; /* 使用 !important 確保應用 */
+}
+
+/* Gmail 背景 */
+.social a.gmail {
+  background-color: #db4437;
+}
+
+.social a i {
+  font-size: 24px; /* 控制圖標大小 */
+  line-height: 1; /* 確保行高不會影響對齊 */
+}
+
+ul{
+  padding: 0;
+  list-style:none;
+}
+
+.word{
+  margin-left: 10%;
+}
+
+.line{
+  margin-left: 10%;
+  margin-top: 10px;
+  border-top: solid 4px #d5bdaf
+}
+
+.listExperience>li{
+  display:flex;
+  margin-bottom:10px;
+}
+.listExperience>li:nth-child(1) ul{
+  border-color:#f26209;
+}
+.listExperience>li:nth-child(2) ul{
+  border-color:#c95a06;
+}
+.listExperience>li:nth-child(3) ul{
+  border-color:#a54f12;
+}
+.listExperience>li:nth-child(4) ul{
+  border-color:#8c4719;
+}
+.listExperience li ul{
+  padding-left:10px;
+  margin-left:10px;
+  border-left:solid 4px #84563b;
+}
+/* list skill */
+.listSkill{
+  display:flex;
+  flex-wrap:wrap;
+}
+.listSkill li{
+  width:25%;
+  padding:5px;
+  box-sizing:border-box;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+/*-------------------動態cricle--------------------*/
+.skill-bar-container{
+  position: relative;
+  width:50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+}
+
+.skill-bar50{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fillProgress50 1.5s ease forwards;
+  animation-fill-mode:forwards;
+}
+
+.skill-bar50::after{
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: #2f3e46;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.content50{
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+}
+
+@keyframes fillProgress50 {
+  0% {
+      background: conic-gradient(#84a98c 0% 0%, #cad2c5 0% 100%);
+  }
+  100% {
+      background: conic-gradient(#84a98c 0% 50%, #cad2c5 50% 100%);
+  }
+}
+
+.skill-bar70{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fillProgress70 1.5s ease forwards;
+  animation-fill-mode:forwards;
+}
+
+.skill-bar70::after{
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: #2f3e46;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.content70{
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+}
+
+@keyframes fillProgress70 {
+  0% {
+      background: conic-gradient(#84a98c 0% 0%, #cad2c5 0% 100%);
+  }
+  100% {
+      background: conic-gradient(#84a98c 0% 70%, #cad2c5 70% 100%);
+  }
+}
+
+.skill-bar10{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fillProgress10 1.5s ease forwards;
+  animation-fill-mode:forwards;
+}
+
+.skill-bar10::after{
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: #2f3e46;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.content10{
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+}
+
+@keyframes fillProgress10 {
+  0% {
+      background: conic-gradient(#84a98c 0% 0%, #cad2c5 0% 100%);
+  }
+  100% {
+      background: conic-gradient(#84a98c 0% 10%, #cad2c5 10% 100%);
+  }
+}
+
+.skill-bar30{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fillProgress30 1.5s ease forwards;
+  animation-fill-mode:forwards;
+}
+
+.skill-bar30::after{
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: #2f3e46;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.content30{
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+}
+
+@keyframes fillProgress30 {
+  0% {
+      background: conic-gradient(#84a98c 0% 0%, #cad2c5 0% 100%);
+  }
+  100% {
+      background: conic-gradient(#84a98c 0% 30%, #cad2c5 30% 100%);
+  }
+}
+/*------------------cricle end-------------------*/
+/*------------------動態bar-------------------*/
+/* list Program */
+.listProgram .bar{
+  width:180px;
+  height:8px;
+  border:solid 2px #2f3e46;
+  border-radius:5px;
+}
+/* .bar,.value{
+  padding-left:5px;
+} */
+.listProgram li{
+  margin: 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding-top:5px;
+}
+
+.skill-col20{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+  gap: 10px;
+  border:solid 2px #2f3e46;
+  border-radius:15px;
+}
+
+.skill-line20{
+  display: flex;
+  background-color: white;
+  height: 10px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.skill-line20::after{
+  content: "";
+  display: flex;
+  background-color: #84a98c;
+  height: 10px;
+  border-radius: 10px;
+  animation: line-percentage20 3s ease;
+  animation-fill-mode: forwards;/*維持keyframes的最後狀態*/
+}
+
+/*動畫從0到20%*/
+@keyframes line-percentage20{
+  0%{
+      width: 0%;
+  }
+  100%{
+      width: 20%;
+  }
+}
+
+.skill-col30{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+  gap: 10px;
+  border:solid 2px #2f3e46;
+  border-radius:15px;
+}
+
+.skill-line30{
+  display: flex;
+  background-color: white;
+  height: 10px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.skill-line30::after{
+  content: "";
+  display: flex;
+  background-color: #84a98c;
+  height: 10px;
+  border-radius: 10px;
+  animation: line-percentage30 3s ease;
+  animation-fill-mode: forwards;/*維持keyframes的最後狀態*/
+}
+
+/*動畫從0到30%*/
+@keyframes line-percentage30{
+  0%{
+      width: 0%;
+  }
+  100%{
+      width: 30%;
+  }
+}
+
+.skill-col40{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+  gap: 10px;
+  border:solid 2px #2f3e46;
+  border-radius:15px;
+}
+
+.skill-line40{
+  display: flex;
+  background-color: white;
+  height: 10px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.skill-line40::after{
+  content: "";
+  display: flex;
+  background-color: #84a98c;
+  height: 10px;
+  border-radius: 10px;
+  animation: line-percentage40 3s ease;
+  animation-fill-mode: forwards;/*維持keyframes的最後狀態*/
+}
+
+/*動畫從0到40%*/
+@keyframes line-percentage40{
+  0%{
+      width: 0%;
+  }
+  100%{
+      width: 40%;
+  }
+}
+
+
+/*------------------bar end-------------------*/
+/*
+第一種寫法:
+main::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+*/
+
+/*
+第二種:
+.clearfix{
+  clear: both;
+}
+*/
+
+.clearfix{
+  clear: both;
+}
+
